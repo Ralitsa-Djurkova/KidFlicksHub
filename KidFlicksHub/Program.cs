@@ -1,6 +1,7 @@
 using KidFlicksHub.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extentions.DependencyInjection;
 
 namespace KidFlicksHub
 {
@@ -10,15 +11,13 @@ namespace KidFlicksHub
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddApplicationDbContext(builder.Configuration);
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddApplicationIdentity(builder.Configuration);
+           
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddApplicationServices();
 
             var app = builder.Build();
 
@@ -42,9 +41,7 @@ namespace KidFlicksHub
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapDefaultControllerRoute();
             app.MapRazorPages();
 
             app.Run();
