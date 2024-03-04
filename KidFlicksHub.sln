@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidFlicksHub", "KidFlicksHub\KidFlicksHub.csproj", "{B94CD34E-1B4E-439A-B400-8B62663AA6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KidFlicksHub", "KidFlicksHub\KidFlicksHub.csproj", "{B94CD34E-1B4E-439A-B400-8B62663AA6D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsFlicksHub.Core", "KidsFlicksHub.Core\KidsFlicksHub.Core.csproj", "{7EA9032D-E6A1-44A2-87FE-2C3ADB91C6F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KidsFlicksHub.Infrastructure", "KidsFlicksHub.Infrastructure\KidsFlicksHub.Infrastructure.csproj", "{044388C2-2782-4AB0-93C8-B0128EBCBF68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B94CD34E-1B4E-439A-B400-8B62663AA6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B94CD34E-1B4E-439A-B400-8B62663AA6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B94CD34E-1B4E-439A-B400-8B62663AA6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA9032D-E6A1-44A2-87FE-2C3ADB91C6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA9032D-E6A1-44A2-87FE-2C3ADB91C6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA9032D-E6A1-44A2-87FE-2C3ADB91C6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA9032D-E6A1-44A2-87FE-2C3ADB91C6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044388C2-2782-4AB0-93C8-B0128EBCBF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044388C2-2782-4AB0-93C8-B0128EBCBF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044388C2-2782-4AB0-93C8-B0128EBCBF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044388C2-2782-4AB0-93C8-B0128EBCBF68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

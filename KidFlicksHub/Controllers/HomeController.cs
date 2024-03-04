@@ -1,4 +1,5 @@
 ﻿using KidFlicksHub.Models;
+using KidsFlicksHub.Core.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,15 +14,12 @@ namespace KidFlicksHub.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var model = new IndexViewModel();
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
