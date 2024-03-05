@@ -38,6 +38,6 @@ namespace KidsFlicksHub.Infrastructure.Models
 		public Actor Actor { get; set; } = null!;
 
 		public ICollection<Movie> Movies { get; set; } = new List<Movie>();
-		public ICollection<Actor> Actors { get; set; } = new List<Actor>();
+		
     }
 }

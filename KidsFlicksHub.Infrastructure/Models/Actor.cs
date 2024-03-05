@@ -29,9 +29,9 @@ namespace KidsFlicksHub.Infrastructure.Models
         [Required]
         [ForeignKey(nameof(MovieId))]
         public Movie Movie { get; set; } = null!;
-		public string UserId { get; set; } = string.Empty;
-		[ForeignKey(nameof(UserId))]
-		public IdentityUser User { get; set; } = null!;
+		//public string UserId { get; set; } = string.Empty;
+		//[ForeignKey(nameof(UserId))]
+		//public IdentityUser User { get; set; } = null!;
 		public ICollection<Movie> Movies { get; set; } = new List<Movie>();
     }
 }
