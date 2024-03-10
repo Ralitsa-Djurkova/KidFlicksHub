@@ -28,8 +28,8 @@ namespace KidsFlicksHub.Infrastructure.Models
         public DateTime DateCreated { get; set; }
         [Required]
         public string ParticipantId { get; set; } = string.Empty;
-        [ForeignKey(nameof(ParticipantId))] 
-        public IdentityUser? Participant { get; set; }
+        [ForeignKey(nameof(ParticipantId))]
+        public IdentityUser Participant { get; set; } = null!;
 
     }
 }

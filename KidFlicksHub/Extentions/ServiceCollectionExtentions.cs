@@ -1,4 +1,5 @@
 ﻿using KidFlicksHub.Data;
+using KidsFlicksHub.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,13 +9,15 @@ namespace Microsoft.Extentions.DependencyInjection
 	{
 		public static  IServiceCollection AddApplicationServices(this IServiceCollection services)
 		{
+			
 			return services;
 		}
 		public static IServiceCollection AddApplicationDbContext(this IServiceCollection services, IConfiguration config)
 		{
 			var connectionString = config.GetConnectionString("DefaultConnection");
-			services.AddDbContext<ApplicationDbContext>(options =>
+			services.AddDbContext<KidFlicksDbContext>(options =>
 				options.UseSqlServer(connectionString));
+
 			services.AddDatabaseDeveloperPageExceptionFilter();
 			return services;
 		}
@@ -28,7 +31,7 @@ namespace Microsoft.Extentions.DependencyInjection
 				options.Password.RequireLowercase = false;
 				options.Password.RequireUppercase = false;
 			})
-			   .AddEntityFrameworkStores<ApplicationDbContext>();
+			   .AddEntityFrameworkStores<KidFlicksDbContext>();
 			return services;
 		}
 	}

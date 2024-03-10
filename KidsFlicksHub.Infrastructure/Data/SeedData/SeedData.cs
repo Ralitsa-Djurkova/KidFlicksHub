@@ -25,6 +25,7 @@ namespace KidsFlicksHub.Infrastructure.Data.SeedData
 			SeedUser();
 			SeedCategory();
 			
+			
         }
         private void SeedUser()
 		{
@@ -33,7 +34,7 @@ namespace KidsFlicksHub.Infrastructure.Data.SeedData
 			AdminUser = new IdentityUser()
 			{
 				Id = "dea12856-c198-4129-b3f3-b893d8395082",
-				UserName = "admin@mail.com",
+				UserName = "admin",
 				NormalizedUserName = "admin@mail.com",
 				Email = "admin@mail.com",
 				NormalizedEmail = "admin@mail.com"
@@ -45,7 +46,7 @@ namespace KidsFlicksHub.Infrastructure.Data.SeedData
 			GuestUser = new IdentityUser()
 			{
 				Id = "6d5800ce-d726-4fc8-83d9-d6b3ac1f591e",
-				UserName = "guest@mail.com",
+				UserName = "guest",
 				NormalizedUserName = "guest@mail.com",
 				Email = "guest@mail.com",
 				NormalizedEmail = "guest@mail.com"
@@ -71,5 +72,7 @@ namespace KidsFlicksHub.Infrastructure.Data.SeedData
 				Name = "Foreign category"
 			};
 		}
+
+		
 	}
 }

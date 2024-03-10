@@ -33,11 +33,11 @@ namespace KidsFlicksHub.Infrastructure.Models
 		public string TrailerUrl { get; set; } = string.Empty;
 		[Required]
         public int CategoryId { get; set; }
-        public Category? Category { get; set; }
+		public Category Category { get; set; } = null!;
 		[Required]
 		public int DirectorId { get; set; }
 		[ForeignKey(nameof(DirectorId))]
-		public Director? Director { get; set; }
+		public Director Director { get; set; } = null!;
 
         public ICollection<Actor> Actors { get; set; } = new List<Actor>();
 		public ICollection<Review> Reviews { get; set; } = new List<Review>();

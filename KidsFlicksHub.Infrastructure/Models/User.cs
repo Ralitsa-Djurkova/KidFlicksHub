@@ -7,9 +7,7 @@ namespace KidsFlicksHub.Infrastructure.Models
 {
 	public class User : IdentityUser
 	{
-		[Key]
-		[Comment("Id for the user")]
-		public int Id { get; set; }
+		
 		[Required]
 		[MaxLength(UserNameMaxLength)]
 		[Comment("User name")]
@@ -20,9 +18,7 @@ namespace KidsFlicksHub.Infrastructure.Models
 		[Comment("Password for the user")]
 		public string Password { get; set; } = string.Empty;
 
-		[Required]
-		[Comment("user email")]
-		public string Email { get; set; } = string.Empty;
+		
 		[Required]
 		[Comment("The role of user")]
 		public string UserRole { get; set; } = string.Empty;

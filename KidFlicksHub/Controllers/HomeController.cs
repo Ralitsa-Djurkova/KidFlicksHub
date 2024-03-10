@@ -14,10 +14,10 @@ namespace KidFlicksHub.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var model = new IndexViewModel();
-            return View();
+            return View(model);
         }
 
 

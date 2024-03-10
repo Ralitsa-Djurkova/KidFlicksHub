@@ -24,8 +24,8 @@ namespace KidsFlicksHub.Infrastructure.Models
 		[Comment("Biography")]
         public string Biography { get; set; } =string.Empty;
 
-        [Required]
-        public string PhotoUrl { get; set; }
+		[Required]
+		public string PhotoUrl { get; set; } = string.Empty;
 
         [Required]
         public int MovieId { get; set; }
@@ -38,6 +38,6 @@ namespace KidsFlicksHub.Infrastructure.Models
 		public Actor Actor { get; set; } = null!;
 
 		public ICollection<Movie> Movies { get; set; } = new List<Movie>();
-		public ICollection<Actor> Actors { get; set; } = new List<Actor>();
+		
     }
 }
